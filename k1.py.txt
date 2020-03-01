@@ -1,0 +1,19 @@
+import random
+a = random.randint(0,100)
+g = 9
+n_g = 1
+print("No. of guesses are limited to 9 only")
+while(n_g<=g):
+    n = int(input("Enter the {} choice: ".format(n_g)))
+    if n<a:
+        print("Enter the greater number")
+    elif n>a:
+    	print("Enter lesser number")
+    else:
+    	print("You won in {} attempts".format(n_g))
+    	break
+    print("No. of guesses left are: ",g-n_g)
+    n_g = n_g+1
+
+if n_g>g:
+    print("Sorry!You Lose")
